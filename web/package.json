@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "name": "print-shop",
+  "version": "1.0.5",
+  "author": "Josh McFarlin <josh@mcfarl.in>",
+  "scripts": {
+    "dev": "next",
+    "build": "next build && next export && node exportSitemap.js",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@sanity/block-content-to-react": "^2.0.7",
+    "@sanity/client": "^1.149.13",
+    "@sanity/image-url": "^0.140.19",
+    "@zeit/next-css": "^1.0.1",
+    "groq": "^1.149.0",
+    "lodash": "^4.17.15",
+    "next": "^9.4.4",
+    "next-seo": "^4.5.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-inlinesvg": "^1.2.0",
+    "react-mailchimp-form": "^1.0.2",
+    "react-mailchimp-subscribe": "^2.1.0"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.6.0",
+    "sitemap": "^2.1.0"
+  }
+}
