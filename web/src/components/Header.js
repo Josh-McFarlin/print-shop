@@ -96,6 +96,7 @@ class Header extends Component {
                 const isActive =
                   router.pathname === "/LandingPage" &&
                   router.query.slug === slug.current;
+
                 return (
                   <li key={_id} className={styles.navItem}>
                     <Link
@@ -103,7 +104,7 @@ class Header extends Component {
                         pathname: "/LandingPage",
                         query: { slug: slug.current },
                       }}
-                      as={`/${slug.current}`}
+                      as={`/${slug.current.replace(/^\//, "")}`}
                     >
                       <a data-is-active={isActive ? "true" : "false"}>
                         {title}
