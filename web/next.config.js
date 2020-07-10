@@ -23,6 +23,7 @@ const reduceRoutes = (obj, route) => {
   const { includeInSitemap, disallowRobot } = route;
   const path =
     route["slug"]["current"] === "/" ? "/" : `/${route["slug"]["current"]}`;
+
   obj[path] = {
     query: {
       slug: slug.current,
@@ -33,6 +34,7 @@ const reduceRoutes = (obj, route) => {
     _updatedAt,
     page: "/LandingPage",
   };
+
   return obj;
 };
 

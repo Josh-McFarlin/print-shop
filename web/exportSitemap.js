@@ -13,6 +13,7 @@ client.fetch(`*[_id == "global-config"] {url}[0]`).then((config) => {
     Object.keys(res).map((page) => {
       const item = res[page];
       const { includeInSitemap, disallowRobots, _updatedAt } = item;
+
       if (includeInSitemap && !disallowRobots) {
         sitemap.add({ url: page, lastmod: new Date(_updatedAt) });
       }
